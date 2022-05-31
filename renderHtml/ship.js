@@ -1,4 +1,4 @@
-export class DrawShip {
+export class DrawShipHtml {
     constructor(board, fn) {
         this.board = board;
         this.size = 10;

@@ -1,4 +1,4 @@
-export class Board {
+export class BoardHtml {
     constructor(width, height) {
         console.log("boardxxxxx");
         this.width = width | 270;

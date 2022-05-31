@@ -3,7 +3,7 @@ import {DrawShip} from "./ship.js";
 import {Board} from "./board.js";
 
 const FactoryDefaultRender = {};
-export const FactoryRender = {
+export const   FactoryRender = {
     blank: (fn) => {
         return new FactoryDefaultRender.blank(FactoryDefaultRender.board,fn);
     },

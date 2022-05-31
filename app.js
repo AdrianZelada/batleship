@@ -1,9 +1,9 @@
 import {Blank} from './entities/blank.js';
 import {Ship} from './entities/ship.js';
 import {Space} from "./entities/space.js";
-import {Board} from "./renderHtml/board.js";
-import {DrawBlank} from "./renderHtml/blank.js";
-import {DrawShip} from "./renderHtml/ship.js";
+import {BoardHtml} from "./renderHtml/board.js";
+import {DrawBlankHtml} from "./renderHtml/blank.js";
+import {DrawShipHtml} from "./renderHtml/ship.js";
 import {BuildRender} from "./render";
 
 // const sizeMap = 10;
@@ -21,10 +21,11 @@ export class Game {
                 const space = new Space(i, j, occupant);
                 space.clickEmit = this.clickSpace;
                 row.push(space);
+                console.log(typeof space.occupant );
             }
             this.map.push(row);
         }
-
+        
         this.generateOtherOccupants(10);
     }
 
@@ -56,9 +57,9 @@ export class Game {
 }
 
 
-const game = new Game(10);
-// const game = new Game(10, {
-//     board: Board,
-//     blank: DrawBlank,
-//     ship: DrawShip
-// });
+// const game = new Game(10);
+const game = new Game(10, {
+    board: BoardHtml,
+    blank: DrawBlankHtml,
+    ship: DrawShipHtml
+});
